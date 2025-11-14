@@ -103,6 +103,83 @@ This section details the core technologies used to build the back-end of the Air
 
 * **GraphQL:** A query language for your APIs. Its purpose is to provide a flexible and efficient alternative to REST, allowing the front-end (or any client) to request *exactly* the data it needs in a single API call.
 
+
+## 🗃️ Database Design
+
+This section outlines the core entities (models) for the application database, their key fields, and their relationships.
+
+### Users
+
+This entity represents an individual using the platform (both guests and hosts).
+
+* **Fields:**
+    * `id` (Primary Key): Unique identifier for the user.
+    * `email` (String, Unique): User's login email.
+    * `password_hash` (String): Hashed password for security.
+    * `full_name` (String): The user's full name.
+    * `created_at` (Timestamp): When the user account was created.
+* **Relationships:**
+    * A **User** can own (have) *many* **Properties**.
+    * A **User** can make *many* **Bookings**.
+    * A **User** can write *many* **Reviews**.
+
+### Properties
+
+This entity represents a listing (e.g., a home, apartment) available for rent.
+
+* **Fields:**
+    * `id` (Primary Key): Unique identifier for the property.
+    * `owner_id` (Foreign Key to Users): Links to the user who owns the property.
+    * `title` (String): The name of the listing.
+    * `location` (String): Physical address or city.
+    * `price_per_night` (Decimal): The cost to book for one night.
+* **Relationships:**
+    * A **Property** *belongs to one* **User** (the owner).
+    * A **Property** can have *many* **Bookings**.
+    * A **Property** can have *many* **Reviews**.
+
+### Bookings
+
+This entity represents a specific reservation of a property by a user.
+
+* **Fields:**
+    * `id` (Primary Key): Unique identifier for the booking.
+    * `user_id` (Foreign Key to Users): Links to the user who made the booking.
+    * `property_id` (Foreign Key to Properties): Links to the property being booked.
+    * `start_date` (Date): The check-in date.
+    * `end_date` (Date): The check-out date.
+* **Relationships:**
+    * A **Booking** *belongs to one* **User** (the guest).
+    * A **Booking** *belongs to one* **Property**.
+    * A **Booking** has *one* **Payment**.
+
+### Reviews
+
+This entity represents feedback left by a user for a property after a stay.
+
+* **Fields:**
+    * `id` (Primary Key): Unique identifier for the review.
+    * `user_id` (Foreign Key to Users): Links to the user who wrote the review.
+    * `property_id` (Foreign Key to Properties): Links to the property being reviewed.
+    * `rating` (Integer): A numerical score (e.g., 1-5).
+    * `comment` (Text): The written feedback from the user.
+* **Relationships:**
+    * A **Review** *belongs to one* **User** (the author).
+    * A **Review** *belongs to one* **Property**.
+
+### Payments
+
+This entity represents the financial transaction for a booking.
+
+* **Fields:**
+    * `id` (Primary Key): Unique identifier for the payment.
+    * `booking_id` (Foreign Key to Bookings): Links to the associated booking.
+    * `amount` (Decimal): The total amount paid.
+    * `status` (String): The state of the payment (e.g., "pending", "completed", "failed").
+    * `transaction_id` (String): The unique ID from the payment processor.
+* **Relationships:**
+    * A **Payment** *belongs to one* **Booking**.
+
 Footer
 
 Description: The bottom section of the application, displaying links and legal information.
