@@ -38,50 +38,49 @@ Functionality: Displays a property image, title, location, price, and a user rat
 Reusability: Extremely High (will be used hundreds of times on the main page).
 
 ## 👥 Team Roles
-
-[cite_start]This section outlines the primary roles and responsibilities for this project, based on standards described by the ITRexGroup blog.
+This section outlines the primary roles and responsibilities for this project, based on standards described by the ITRexGroup blog.
 
 ### Software Architect
 
-* [cite_start]**Description:** An expert-level software engineer who "makes executive software design decisions". [cite_start]This role is crucial for complex projects to ensure stability and smart design.
+**Description:** An expert-level software engineer who "makes executive software design decisions". [cite_start]This role is crucial for complex projects to ensure stability and smart design.
 * **Responsibilities:**
-    * [cite_start]Designs the "high-level software architecture".
-    * [cite_start]Selects the "appropriate tools and platforms" for the project.
-    * [cite_start]Decides how "services and databases should communicate".
-    * [cite_start]Ensures the product is "secure and stable".
+    * Designs the "high-level software architecture".
+    * Selects the "appropriate tools and platforms" for the project.
+    * Decides how "services and databases should communicate".
+    * Ensures the product is "secure and stable".
 
 ### Back-end Developer
 
-* [cite_start]**Description:** A type of "Software Developer"  [cite_start]who "implement[s] the core of an app—its algorithms and business logic".
+**Description:** A type of "Software Developer"  [cite_start]who "implement[s] the core of an app—its algorithms and business logic".
 * **Responsibilities:**
-    * [cite_start]"Engineers and stabilizes the product".
-    * [cite_start]"Solves any technical problems emerging during the development lifecycle".
-    * [cite_start]Writes the code for the application's core logic.
-    * [cite_start]May "devise an app architecture or design and implement the necessary integrations".
+    * "Engineers and stabilizes the product".
+    *"Solves any technical problems emerging during the development lifecycle".
+    *Writes the code for the application's core logic.
+    * ]May "devise an app architecture or design and implement the necessary integrations".
 
 ### UI/UX Designer
 
-* [cite_start]**Description:** Responsible for "transform[ing] a product vision into user-friendly designs".
+**Description:** Responsible for "transform[ing] a product vision into user-friendly designs".
 * **Responsibilities:**
-    * [cite_start]**UI (User Interface):** Devises "intuitive, easy-to-use, and eye-pleasing interfaces".
-    * [cite_start]**UX (User Experience):** Thinks out the "entire journey of a user’s interaction with a product".
-    * [cite_start]Conducts "user research, persona development, information architecture design, wireframing, [and] prototyping".
+    * **UI (User Interface):** Devises "intuitive, easy-to-use, and eye-pleasing interfaces".
+    * **UX (User Experience):** Thinks out the "entire journey of a user’s interaction with a product".
+      Conducts "user research, persona development, information architecture design, wireframing, [and] prototyping".
 
 ### Quality Assurance (QA) Engineer
 
 * [cite_start]**Description:** Verifies whether the application "performs according to requirements".
 * **Responsibilities:**
-    * [cite_start]"Spots functional and non-functional defects".
-    * [cite_start]Runs various checks to evaluate "functionality, usability, security, or performance".
-    * [cite_start]Analyzes test results and "report[s] on the application quality".
+    * "Spots functional and non-functional defects".
+    * runs various checks to evaluate "functionality, usability, security, or performance".
+    * Analyzes test results and "report[s] on the application quality".
 
 ### DevOps Engineer
 
-* [cite_start]**Description:** Serves as a "link between" the development and operations teams to "unify[] and automat[e] the software delivery process".
+**Description:** Serves as a "link between" the development and operations teams to "unify[] and automat[e] the software delivery process".
 * **Responsibilities:**
-    * [cite_start]"Facilitates cooperation between development and operations teams".
-    * [cite_start]"Builds continuous integration and continuous delivery (CI/CD) pipelines" for faster delivery.
-    * [cite_start]"Oversee[s] and facilitate[s] code releases".
+    * "Facilitates cooperation between development and operations teams".
+    * "Builds continuous integration and continuous delivery (CI/CD) pipelines" for faster delivery.
+    * "Oversees and facilitates code releases".
 
 --
 ### Database Administrator (DBA)
