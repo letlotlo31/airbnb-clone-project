@@ -205,7 +205,15 @@ Protecting user data and ensuring the integrity of our platform is a top priorit
 * **Protecting User Data:** We are responsible for securing personal user information (names, emails, passwords). Authentication and authorization ensure that a user's private data is only accessible to them.
 * **Securing Payments:** While a third-party processor will handle credit card details, our API must securely manage payment statuses and booking confirmations. Security prevents fraudulent bookings or unauthorized access to payment histories.
 * **Maintaining Platform Integrity:** We must prevent malicious actors from spamming reviews, deleting other users' listings, or scraping our data. Rate limiting and authorization are the primary defenses for this.
+Objective: Understand how CI/CD pipelines contribute to the development process.
 
+Instructions:
+
+In your README.md file, create a section called “CI/CD Pipeline”.
+
+Briefly explain what CI/CD pipelines are and why they are important for the project.
+
+Mention the tools that could be used for this (e.g., GitHub Actions, Docker, etc.).
 Footer
 
 Description: The bottom section of the application, displaying links and legal information.
