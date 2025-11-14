@@ -179,6 +179,32 @@ This entity represents the financial transaction for a booking.
     * `transaction_id` (String): The unique ID from the payment processor.
 * **Relationships:**
     * A **Payment** *belongs to one* **Booking**.
+ 
+
+
+## 🔐 API Security
+
+Protecting user data and ensuring the integrity of our platform is a top priority. This section outlines the key security measures that will be implemented for the API.
+
+### Key Security Measures
+
+1.  **Authentication (Who are you?)**
+    * **Implementation:** We will use **JSON Web Tokens (JWT)**. When a user logs in with their email and password, the server will issue a short-lived, digitally signed JWT.
+    * **Usage:** This token must be included in the `Authorization` header of all protected API requests. This proves the user is who they claim to be.
+
+2.  **Authorization (What are you allowed to do?)**
+    * **Implementation:** We will use **permission-based checks** within Django.
+    * **Usage:** Even if a user is authenticated, we will check if they are *authorized* to perform a specific action. For example, a user can only modify their *own* profile or delete a *property they own*. They cannot delete someone else's property.
+
+3.  **Rate Limiting**
+    * **Implementation:** We will configure **throttling** on the API.
+    * **Usage:** This prevents a single user or IP address from making too many requests in a short period. This is a crucial defense against brute-force login attempts and (Denial of Service) DDoS attacks.
+
+### Why This Is Crucial
+
+* **Protecting User Data:** We are responsible for securing personal user information (names, emails, passwords). Authentication and authorization ensure that a user's private data is only accessible to them.
+* **Securing Payments:** While a third-party processor will handle credit card details, our API must securely manage payment statuses and booking confirmations. Security prevents fraudulent bookings or unauthorized access to payment histories.
+* **Maintaining Platform Integrity:** We must prevent malicious actors from spamming reviews, deleting other users' listings, or scraping our data. Rate limiting and authorization are the primary defenses for this.
 
 Footer
 
