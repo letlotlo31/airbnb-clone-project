@@ -92,6 +92,17 @@ This section outlines the primary roles and responsibilities for this project, b
     * Optimizing database performance (e.g., indexing, query optimization).
     * Managing database backups, recovery, and maintenance.
 
+
+## 💻 Technology Stack
+
+This section details the core technologies used to build the back-end of the AirBnB clone.
+
+* **Django:** A high-level Python web framework. Its purpose in this project is to build the robust, secure, and scalable server-side application, including all the business logic and RESTful APIs.
+
+* **PostgreSQL:** A powerful, open-source object-relational database system. Its purpose is to securely store and manage all persistent data for the application, such as user profiles, listings, bookings, and reviews.
+
+* **GraphQL:** A query language for your APIs. Its purpose is to provide a flexible and efficient alternative to REST, allowing the front-end (or any client) to request *exactly* the data it needs in a single API call.
+
 Footer
 
 Description: The bottom section of the application, displaying links and legal information.
